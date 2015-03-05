@@ -8,6 +8,7 @@ Dictionary::Dictionary(string textFile) {
     
     while(!words.eof()) {
         words >> word;
+        std::transform(word.begin(), word.end(), word.begin(), ::tolower);
         wordBank.push_back(word);
     }
 }
